@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBar.vue is a Vue instance 1`] = `
+<div class="app-bar-wrapper">
+  <v-app-bar-stub dark="true" tag="header" tile="true" extensionheight="48" src="" value="true" fixed="true">
+    <v-app-bar-nav-icon-stub></v-app-bar-nav-icon-stub>
+    <!---->
+    <v-toolbar-title-stub>Diogo Mendonça</v-toolbar-title-stub>
+  </v-app-bar-stub>
+</div>
+`;

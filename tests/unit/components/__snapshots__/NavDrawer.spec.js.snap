@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavDrawer.vue is a Vue instance 1`] = `
+<v-navigation-drawer-stub fixed="true" expandonhover="true" height="100%" minivariant="true" minivariantwidth="56" mobilebreakpoint="1264" permanent="true" src="" tag="aside" width="256">
+  <v-list-stub tag="div" tile="true" nav="true">
+    <v-list-item-stub activeclass="" tag="div" twoline="true" class="px-0">
+      <v-list-item-avatar-stub size="40"><img src="@/assets/avatar.jpeg"></v-list-item-avatar-stub>
+      <v-list-item-content-stub>
+        <v-list-item-title-stub>Diogo Mendonça</v-list-item-title-stub>
+        <v-list-item-subtitle-stub>My Setlists</v-list-item-subtitle-stub>
+      </v-list-item-content-stub>
+    </v-list-item-stub>
+    <v-divider-stub></v-divider-stub>
+    <v-list-item-group-stub value="true" activeclass="text--accent-4">
+      <v-list-item-stub activeclass="" to="/" tag="div">
+        <v-list-item-icon-stub>
+          <v-icon-stub>home</v-icon-stub>
+        </v-list-item-icon-stub>
+        <v-list-item-title-stub>Home</v-list-item-title-stub>
+      </v-list-item-stub>
+      <v-list-item-stub activeclass="" to="/shows" tag="div">
+        <v-list-item-icon-stub>
+          <v-icon-stub>timeline</v-icon-stub>
+        </v-list-item-icon-stub>
+        <v-list-item-title-stub>Shows</v-list-item-title-stub>
+      </v-list-item-stub>
+      <v-list-item-stub activeclass="" to="/artists" tag="div">
+        <v-list-item-icon-stub>
+          <v-icon-stub>person</v-icon-stub>
+        </v-list-item-icon-stub>
+        <v-list-item-title-stub>Artists</v-list-item-title-stub>
+      </v-list-item-stub>
+    </v-list-item-group-stub>
+  </v-list-stub>
+</v-navigation-drawer-stub>
+`;

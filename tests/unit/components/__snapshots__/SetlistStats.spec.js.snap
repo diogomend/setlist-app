@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SetlistStats.vue is a Vue instance 1`] = `
+<div class="setlist-stats">
+  <v-layout-stub tag="div" wrap="wrap">
+    <v-flex-stub tag="div" xs12="xs12">
+      <v-layout-stub tag="div" wrap="wrap">
+        <v-flex-stub tag="div" xs6="" md3="">
+          <v-card-stub loaderheight="4" tag="div" height="100%" class="text-xs-center">
+            <v-card-text-stub>
+              <div class="display-1 mb-2">1</div>
+              Concerts
+            </v-card-text-stub>
+          </v-card-stub>
+        </v-flex-stub>
+        <v-flex-stub tag="div" xs6="" md3="">
+          <v-card-stub loaderheight="4" tag="div" height="100%" class="text-xs-center">
+            <v-card-text-stub>
+              <div class="display-1 mb-2">0</div>
+              Artists
+            </v-card-text-stub>
+          </v-card-stub>
+        </v-flex-stub>
+        <v-flex-stub tag="div" xs6="" md3="">
+          <v-card-stub loaderheight="4" tag="div" height="100%" class="text-xs-center">
+            <v-card-text-stub>
+              <div class="display-1 mb-2">1</div>
+              Countries
+            </v-card-text-stub>
+          </v-card-stub>
+        </v-flex-stub>
+        <v-flex-stub tag="div" xs6="" md3="">
+          <v-card-stub loaderheight="4" tag="div" height="100%" class="text-xs-center">
+            <v-card-text-stub>
+              <div class="display-1 mb-2">0</div>
+              This year
+            </v-card-text-stub>
+          </v-card-stub>
+        </v-flex-stub>
+      </v-layout-stub>
+    </v-flex-stub>
+  </v-layout-stub>
+</div>
+`;

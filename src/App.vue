@@ -1,20 +1,61 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-progress-linear
+      v-if="isLoading"
+      color="deep-orange accent-4"
+      indeterminate
+      rounded
+      height="6"
+    ></v-progress-linear>
+    <template v-else-if="getTotalConcerts > 0">
+      <app-bar v-if="isMobile" />
+      <nav-drawer />
+      <v-container class="main-container">
+        <router-view />
+      </v-container>
+    </template>
+    <template v-else>
+      <h3 class="mt-10">Couldn't load Setlist for your account</h3>
+    </template>
+  </v-app>
 </template>
 
+<script>
+import { mapActions, mapGetters } from "vuex";
+import AppBar from "@/components/AppBar";
+import NavDrawer from "@/components/NavDrawer";
+import mobileMixin from "@/mixins/mobileMixin";
+export default {
+  components: {
+    AppBar,
+    NavDrawer
+  },
+  mixins: [mobileMixin],
+  methods: {
+    ...mapActions("setlist", ["fetchSetlists"])
+  },
+  computed: {
+    ...mapGetters({
+      isLoading: "appState/getLoading",
+      getTotalConcerts: "setlist/getTotalConcerts"
+    })
+  },
+  mounted() {
+    this.fetchSetlists();
+  }
+};
+</script>
+
 <style lang="scss">
+.relative {
+  position: relative;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
@@ -28,5 +69,9 @@
       color: #42b983;
     }
   }
+}
+
+.container.main-container {
+  padding-top: 100px;
 }
 </style>

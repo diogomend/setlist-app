@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBands.vue is a Vue instance 1`] = `
+<div class="top-bands">
+  <v-card-title-stub class="deep-orange darken-1">Top Artists</v-card-title-stub>
+</div>
+`;
