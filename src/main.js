@@ -13,3 +13,16 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount("#app");
+
+window.addEventListener(
+  "touchmove",
+  function() {
+    document.body.classList.add("hide-ripple");
+  },
+  { passive: true }
+);
+window.addEventListener("touchend", function() {
+  setTimeout(function() {
+    document.body.classList.remove("hide-ripple");
+  }, 50);
+});

@@ -35,7 +35,7 @@ describe("App.vue", () => {
       }
     });
     await flushPromises();
-    
+
     const errorContent = wrapper.find("h3");
     expect(errorContent.text()).toBe("Couldn't load Setlist for your account");
   });

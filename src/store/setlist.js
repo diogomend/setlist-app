@@ -12,7 +12,7 @@ const actions = {
       //return Promise.reject('Could not load setlist information');
       return false;
     } finally {
-      dispatch("appState/toggleLoading", false, { root: true })
+      dispatch("appState/toggleLoading", false, { root: true });
     }
   }
 };

@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style lang="scss">
+.hide-ripple .v-ripple__container {
+  display: none;
+}
+
 .relative {
   position: relative;
 }

@@ -2,7 +2,7 @@
 
 exports[`ArtistCard.vue is a Vue instance 1`] = `
 <v-card-stub loaderheight="4" to="[object Object]" tag="div" maxwidth="450" dark="true" class="mx-auto mt-5">
-  <v-img-stub height="250px" options="[object Object]" position="center center" src="http://localhost:8000/fanart/MOCK_MBID" transition="fade-transition" class="white--text align-end">
+  <v-img-stub height="250px" aspectratio="1" lazysrc="http://localhost:8000/fanart/MOCK_MBID.png?preview=true" options="[object Object]" position="center center" src="http://localhost:8000/fanart/MOCK_MBID.png" transition="false" class="white--text align-end">
     <v-card-title-stub color="deep-orange lighten-1">MOCK_NAME</v-card-title-stub>
   </v-img-stub>
   <v-card-text-stub class="text--primary">

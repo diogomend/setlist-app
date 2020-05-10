@@ -5,7 +5,15 @@
     dark
     :to="{ name: 'Artist', params: { mbid } }"
   >
-    <v-img class="white--text align-end" height="250px" :src="getImage()">
+    <v-img
+      class="white--text align-end"
+      height="250px"
+      :src="image"
+      :lazy-src="preview"
+      transition="false"
+      aspect-ratio="1"
+      :key="mbid"
+    >
       <v-card-title color="deep-orange lighten-1">{{ name }}</v-card-title>
     </v-img>
     <v-card-text class="text--primary">
@@ -44,11 +52,12 @@ export default {
     }),
     totalShows() {
       return this.artistShows(this.mbid).length;
-    }
-  },
-  methods: {
-    getImage() {
-      return `${process.env.VUE_APP_API}fanart/${this.mbid}`;
+    },
+    image() {
+      return `${process.env.VUE_APP_API}fanart/${this.mbid}.png`;
+    },
+    preview() {
+      return `${process.env.VUE_APP_API}fanart/${this.mbid}.png?preview=true`;
     }
   }
 };
