@@ -54,8 +54,9 @@ export default {
     }),
     currentYear() {
       const year = new Date().getFullYear();
+      console.log(this.yearlyConcerts);
       return typeof this.yearlyConcerts[year] !== "undefined"
-        ? this.yearlyConcerts[year]
+        ? this.yearlyConcerts[year].length
         : 0;
     }
   }
