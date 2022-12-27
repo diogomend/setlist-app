@@ -79,9 +79,7 @@ export default {
       if (Number.isNaN(this.$router.history.current.params.year)) {
         return;
       }
-      console.log(
-        this.getShowsByYear(this.$router.history.current.params.year)
-      );
+
       return this.getShowsByYear(this.$router.history.current.params.year);
     },
     getVenues() {
