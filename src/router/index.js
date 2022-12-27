@@ -33,6 +33,23 @@ const routes = [
     name: "Artist",
     component: () =>
       import(/* webpackChunkName: "show" */ "../views/ArtistDetails.vue")
+  },
+  {
+    path: "/shows/year/:year",
+    name: "Year",
+    component: () => import(/* webpackChunkName: "show" */ "../views/Year.vue"),
+    beforeRouteEnter: (to, next) => {
+      if (Number.isNaN(to.params.year)) {
+        return false;
+      }
+
+      const year = parseInt(to.params.year);
+      if (year > 1950 && year < 2090) {
+        next();
+      }
+
+      return false;
+    }
   }
 ];
 

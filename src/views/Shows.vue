@@ -1,10 +1,20 @@
 <template>
   <div>
-    <v-card-title class="deep-orange darken-1">Shows</v-card-title>
+    <v-card-title class="deep-orange--text darken-1 text-h3"
+      >Shows</v-card-title
+    >
     <v-timeline dense clipped>
       <div v-for="(year, index) in years" :key="index">
         <v-timeline-item class="mb-4" hide-dot>
-          <h2>{{ year }}</h2>
+          <v-btn
+            large
+            color="primary"
+            dark
+            class="year-link text-h4 mt-10"
+            :to="`/shows/year/${year}`"
+          >
+            {{ year }}
+          </v-btn>
         </v-timeline-item>
         <div v-for="(concert, i) in getYearlyConcerts[year]" :key="i">
           <div class="timeline-wrapper" ripple @click="viewSet(concert.id)">
@@ -74,5 +84,10 @@ h2 {
 
 h3 {
   color: white;
+}
+
+.year-link {
+  color: #ff7043;
+  text-decoration: none;
 }
 </style>

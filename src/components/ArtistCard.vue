@@ -1,10 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto mt-5"
-    max-width="450"
-    dark
-    :to="{ name: 'Artist', params: { mbid } }"
-  >
+  <v-card class="mx-auto mt-5" max-width="450" dark :to="linkUrl">
     <v-img
       class="white--text align-end"
       height="250px"
@@ -17,13 +12,15 @@
       <v-card-title color="deep-orange lighten-1">{{ name }}</v-card-title>
     </v-img>
     <v-card-text class="text--primary">
-      <v-layout row wrap class="text-left">
-        <v-flex class="align-self-center ml-5">
-          <div class="top-bands-attended">
-            Attended <b>{{ totalShows }}</b> times
-          </div>
-        </v-flex>
-      </v-layout>
+      <slot name="content">
+        <v-layout row wrap class="text-left">
+          <v-flex class="align-self-center ml-5">
+            <div class="top-bands-attended">
+              Attended <b>{{ totalShows }}</b> times
+            </div>
+          </v-flex>
+        </v-layout>
+      </slot>
     </v-card-text>
   </v-card>
 </template>
@@ -44,6 +41,10 @@ export default {
       type: String,
       required: false,
       default: "#967355"
+    },
+    to: {
+      type: String,
+      required: false
     }
   },
   computed: {
@@ -58,6 +59,13 @@ export default {
     },
     preview() {
       return `${process.env.VUE_APP_API}fanart/${this.mbid}.png?preview=true`;
+    },
+    linkUrl() {
+      if (this.to) {
+        return this.to;
+      }
+
+      return `/artists/${this.mbid}`;
     }
   }
 };

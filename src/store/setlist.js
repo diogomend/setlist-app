@@ -75,6 +75,18 @@ const getters = {
       return { ...ac, [year]: [setlist] };
     }, {});
   },
+  getShowsByYear: state => year => {
+    return state.setlists.reduce((ac, setlist) => {
+      const dateSplit = setlist.eventDate.split("-");
+      const concertYear = parseInt(dateSplit[2]);
+
+      if (concertYear != year) {
+        return ac;
+      }
+
+      return [...ac, setlist];
+    }, []);
+  },
   getTotalCountries: state => {
     const countries = state.setlists.reduce((ac, setlist) => {
       const country = setlist.venue.city.country.code;

@@ -1,6 +1,8 @@
 <template>
   <div class="top-bands">
-    <v-card-title class="deep-orange darken-1">Top Artists</v-card-title>
+    <v-card-title class="deep-orange--text darken-1 text-h3"
+      >Top Artists</v-card-title
+    >
     <div
       v-for="(artist, i) in getTopArtists"
       :key="i"

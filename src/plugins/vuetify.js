@@ -13,7 +13,7 @@ const opts = {
     dark: true,
     themes: {
       dark: {
-        primary: "#ff7597",
+        primary: "#ff7043",
         secondary: "#b0bec5",
         accent: "#ff0266",
         error: "#b71c1c"
