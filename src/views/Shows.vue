@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card-title class="deep-orange--text darken-1 text-h3"
+    <v-card-title class="deep-orange--text darken-1 display-2"
       >Shows</v-card-title
     >
     <v-timeline dense clipped>
@@ -10,7 +10,7 @@
             large
             color="primary"
             dark
-            class="year-link text-h4 mt-10"
+            class="year-link display-3 mt-10"
             :to="`/shows/year/${year}`"
           >
             {{ year }}

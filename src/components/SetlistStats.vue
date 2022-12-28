@@ -1,6 +1,6 @@
 <template>
   <div class="setlist-stats">
-    <v-card-title class="deep-orange--text darken-1 text-h3 mb-10"
+    <v-card-title class="deep-orange--text darken-1 display-2 mb-10"
       >Total Stats</v-card-title
     >
     <v-layout wrap="wrap">

@@ -1,6 +1,6 @@
 <template>
   <div class="artists-list">
-    <v-card-title class="deep-orange--text darken-1 text-h3"
+    <v-card-title class="deep-orange--text darken-1 display-2"
       >Artists</v-card-title
     >
     <v-layout wrap="wrap">

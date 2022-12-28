@@ -47,7 +47,11 @@ export default {
 </script>
 
 <style lang="scss">
-.hide-ripple .v-ripple__container {
+body .v-card--link:focus:before {
+  opacity: 0;
+}
+.hide-ripple .v-ripple__container,
+.v-ripple__container {
   display: none;
 }
 

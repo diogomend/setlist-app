@@ -7,7 +7,7 @@
       <h2>No information for the selected year</h2>
     </template>
     <template v-else>
-      <v-card-title class="deep-orange--text darken-1 text-h3 mb-5"
+      <v-card-title class="deep-orange--text darken-1 display-2 mb-5"
         >{{ year }} Year Review</v-card-title
       >
       <v-flex xs12="xs12">
@@ -43,7 +43,7 @@
           >
             <div slot="content">
               <v-layout row wrap class="text-left">
-                <v-flex class="align-self-center pa-3">
+                <v-flex class="align-self-center pa-3 pt-0">
                   <div class="date deep-orange--text">
                     {{ formatDate(eventDate) }}
                   </div>

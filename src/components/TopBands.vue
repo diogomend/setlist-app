@@ -1,6 +1,6 @@
 <template>
   <div class="top-bands">
-    <v-card-title class="deep-orange--text darken-1 text-h3"
+    <v-card-title class="deep-orange--text darken-1 display-2"
       >Top Artists</v-card-title
     >
     <div
