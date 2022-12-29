@@ -11,7 +11,7 @@
         >{{ year }} Year Review</v-card-title
       >
       <v-flex xs12="xs12">
-        <v-layout wrap="wrap" class="px-xs-10 px-sm-10 px-md-3">
+        <v-layout wrap="wrap" class="px-3 px-sm-10 px-md-3">
           <v-flex xs6>
             <v-card class="text-xs-center">
               <v-card-text>
@@ -132,6 +132,7 @@ export default {
 
 <style scoped lang="scss">
 .v-card__title {
+  word-break: break-word;
   font-size: 32px;
   text-align: center;
   display: block;
@@ -152,6 +153,7 @@ export default {
   @media screen and (min-width: 960px) {
     padding: 16px;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 

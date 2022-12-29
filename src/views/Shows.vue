@@ -8,9 +8,8 @@
         <v-timeline-item class="mb-4" hide-dot>
           <v-btn
             large
-            color="primary"
             dark
-            class="year-link display-3 mt-10"
+            class="year-link display-1 mt-10 px-10 height-auto"
             :to="`/shows/year/${year}`"
           >
             {{ year }}

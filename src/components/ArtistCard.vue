@@ -92,6 +92,7 @@ a.theme--dark.v-card.v-card {
 
   @media screen and (min-width: 600px) and (max-width: 959px) {
     margin: 24px !important;
+    margin-bottom: 0 !important;
   }
 }
 
