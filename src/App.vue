@@ -80,6 +80,12 @@ body .v-card--link:focus:before {
 }
 
 .container.main-container {
+  width: 90%;
+  max-width: initial;
   padding-top: 100px;
+
+  @media screen and (min-width: 960px) {
+    padding-left: 5%;
+  }
 }
 </style>

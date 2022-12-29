@@ -11,7 +11,7 @@
         >{{ year }} Year Review</v-card-title
       >
       <v-flex xs12="xs12">
-        <v-layout wrap="wrap" class="px-3 px-sm-10 px-md-3">
+        <v-layout wrap="wrap">
           <v-flex xs6>
             <v-card class="text-xs-center">
               <v-card-text>
@@ -30,7 +30,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <div class="row year-artists-container">
+      <div class="year-artists-container">
         <div
           v-for="({ artist, eventDate, venue, id }, i) in shows"
           :key="i"
@@ -141,7 +141,6 @@ export default {
   }
 }
 .year-artists-container {
-  margin: 0 16px;
   @media screen and (min-width: 960px) {
     margin: auto;
   }

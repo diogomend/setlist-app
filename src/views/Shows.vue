@@ -24,13 +24,13 @@
                     {{ concert.artist.name }}
                   </h3>
                   <div>
-                    {{ concert.venue.city.name }},
-                    {{ concert.venue.city.country.name }}
+                    {{ concert.eventDate }}
                   </div>
                 </v-flex>
                 <v-flex xs12 sm5 text-sm-right text-small>
                   <div class="font-weight-thin mt-2 pr-4">
-                    {{ concert.eventDate }}
+                    {{ concert.venue.city.name }},
+                    {{ concert.venue.city.country.name }}
                   </div>
                 </v-flex>
               </v-layout>
