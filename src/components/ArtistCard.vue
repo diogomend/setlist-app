@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto mt-5" max-width="450" dark :to="linkUrl">
+  <v-card class="mx-auto mt-5" max-width="600" dark :to="linkUrl">
     <v-img
       class="white--text align-end"
       height="250px"
@@ -91,7 +91,6 @@ a.theme--dark.v-card.v-card {
   margin: 0;
 
   @media screen and (min-width: 600px) and (max-width: 959px) {
-    margin: 24px !important;
     margin-bottom: 0 !important;
   }
 }

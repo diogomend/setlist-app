@@ -15,7 +15,9 @@
           <v-flex xs6>
             <v-card class="text-xs-center">
               <v-card-text>
-                <div class="display-1 mb-2">{{ shows.length }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="shows.length" />
+                </div>
                 Concerts
               </v-card-text>
             </v-card>
@@ -23,14 +25,16 @@
           <v-flex xs6>
             <v-card class="text-xs-center">
               <v-card-text>
-                <div class="display-1 mb-2">{{ getVenues }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="getVenues" />
+                </div>
                 Venues
               </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
       </v-flex>
-      <div class="year-artists-container">
+      <div class="year-artists-container row">
         <div
           v-for="({ artist, eventDate, venue, id }, i) in shows"
           :key="i"
@@ -63,10 +67,12 @@
 <script>
 import { mapGetters } from "vuex";
 import ArtistCard from "@/components/ArtistCard";
+import IncreaseNumber from "@/components/IncreaseNumber";
 export default {
   name: "Year",
   components: {
-    ArtistCard
+    ArtistCard,
+    IncreaseNumber
   },
   computed: {
     ...mapGetters({
@@ -131,6 +137,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.year-artists-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .v-card__title {
   word-break: break-word;
   font-size: 32px;
@@ -140,20 +152,9 @@ export default {
     text-align: left;
   }
 }
-.year-artists-container {
-  @media screen and (min-width: 960px) {
-    margin: auto;
-  }
-}
+
 .year-artists {
   display: inline-block;
-  padding: 0;
-  margin: 12px 0;
-  @media screen and (min-width: 960px) {
-    padding: 16px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
 }
 
 .date {

@@ -9,7 +9,9 @@
           <v-flex xs6 md3>
             <v-card class="text-xs-center" height="100%">
               <v-card-text>
-                <div class="display-1 mb-2">{{ totalConcerts }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="totalConcerts" />
+                </div>
                 Concerts
               </v-card-text>
             </v-card>
@@ -17,7 +19,9 @@
           <v-flex xs6 md3>
             <v-card class="text-xs-center" height="100%">
               <v-card-text>
-                <div class="display-1 mb-2">{{ totalArtists }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="totalArtists" />
+                </div>
                 Artists
               </v-card-text>
             </v-card>
@@ -25,7 +29,9 @@
           <v-flex xs6 md3>
             <v-card class="text-xs-center" height="100%">
               <v-card-text>
-                <div class="display-1 mb-2">{{ totalCountries }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="totalCountries" />
+                </div>
                 Countries
               </v-card-text>
             </v-card>
@@ -33,7 +39,9 @@
           <v-flex xs6 md3>
             <v-card class="text-xs-center" height="100%">
               <v-card-text>
-                <div class="display-1 mb-2">{{ currentYear }}</div>
+                <div class="display-1 mb-2">
+                  <increase-number :number="currentYear" />
+                </div>
                 This year
               </v-card-text>
             </v-card>
@@ -46,8 +54,12 @@
 
 <script>
 import { mapGetters } from "vuex";
+import IncreaseNumber from "./IncreaseNumber.vue";
 export default {
   name: "SetlistStats",
+  components: {
+    IncreaseNumber
+  },
   computed: {
     ...mapGetters({
       yearlyConcerts: "setlist/getYearlyConcerts",

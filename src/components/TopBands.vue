@@ -55,12 +55,6 @@ export default {
 }
 .top-bands-container {
   display: inline-block;
-  padding: 0;
-  margin: 12px 0;
-  @media screen and (min-width: 960px) {
-    padding: 16px;
-    margin-bottom: 0;
-  }
 }
 
 .top-bands-item {
