@@ -19,17 +19,21 @@ export default {
     };
   },
   methods: {
-    incrementNumber() {
-      if (this.increment < this.number) {
-        this.increment += 1;
-        return;
-      }
-
-      clearInterval(this.intervalId);
+    animateNumber(start, end, duration) {
+      const difference = end - start;
+      const updateInterval = duration / difference;
+      this.increment = start;
+      const timer = setInterval(() => {
+        start++;
+        this.increment = start;
+        if (start >= end) {
+          clearInterval(timer);
+        }
+      }, updateInterval);
     }
   },
   mounted() {
-    this.intervalId = setInterval(this.incrementNumber, 20);
+    this.animateNumber(0, this.number, 1000);
   }
 };
 </script>
